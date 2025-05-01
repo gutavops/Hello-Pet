@@ -1,0 +1,53 @@
+/* Estilização geral */
+body {
+  font-family: Inter, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+}
+
+/* Cabeçalho com logo e título */
+header {
+  background-color: #486465;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  gap: 10px;
+}
+.logo img {
+  max-width: 100px;
+  margin-right: 15px;
+}
+
+.logo h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex; /* Faz os itens ficarem lado a lado */
+  list-style: none; /* Remove os marcadores da lista */
+  gap: 10px;
+}
+
+nav a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: white;
+  font-weight: 200;
+}
+
+nav a:hover {
+  color: #ff8c42;
+}
+

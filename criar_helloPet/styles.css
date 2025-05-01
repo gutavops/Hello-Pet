@@ -14,15 +14,9 @@
   --gray-400: #717171;
   --gray-800: #151515;
   --gray-900: #121212;
+  --green-200: #eef5f5;
   --green-900: #486465;
   --orange: #ff8c42;
-
-  --cor-primaria: #47b5a5;
-  --cor-primaria-hover: #3aa295;
-  --cor-secundaria: #486465;
-  --cor-destaque: #ff8c42;
-  --cor-fundo: #f8f9fa;
-  --cor-texto: #212529;
 }
 
 body {
@@ -82,6 +76,90 @@ nav a:hover {
   color: var(--white);
 }
 .login-btn:hover {
+  color: var(--orange);
+}
+
+/* ========================== Section Hero =============================================== */
+.hero {
+  background-color: var(--cor-fundo);
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--cor-texto);
+}
+
+.hero h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.btnSaibaMais {
+  background-color: var(--green-900);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btnSaibaMais:hover {
+  background-color: var(--orange);
+}
+
+/* ========================== Section Features =============================================== */
+.features {
+  background-color: var(--green-200);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.features h3 {
+  font-size: 30px;
+  color: var(--green-900);
+  margin-bottom: 30px;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.features li {
+  font-size: 15px;
+  color: var(--gray-800);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ========================== Footer =============================================== */
+footer {
+  background-color: var(--green-900);
+  color: var(--white);
+  padding: 20px 40px;
+  margin-top: 40px;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  max-width: 100px;
+}
+
+.footerContainer a {
   color: var(--orange);
 }
 

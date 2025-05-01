@@ -1,14 +1,40 @@
-/* Estilização geral */
+/* ========================== GERAL =============================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-header: linear-gradient(88.27deg, #869C2B 0%, #5B7020 100%);
+  --white: #FFFFFF;
+  --transparent: rgba(255, 255, 255, 0.2);
+  --gray-50: #D9D9D9;
+  --gray-100: #595959;
+  --gray-400: #717171;
+  --gray-800: #151515;
+  --gray-900: #121212;
+  --green-900: #486465;
+  --orange: #ff8c42;
+
+  --cor-primaria: #47b5a5;
+  --cor-primaria-hover: #3aa295;
+  --cor-secundaria: #486465;
+  --cor-destaque: #ff8c42;
+  --cor-fundo: #f8f9fa;
+  --cor-texto: #212529;
+}
+
 body {
-  font-family: Inter, sans-serif;
-  background-color: #f8f9fa;
+  font-family: "Inter", sans-serif;
+  background-color: var(--white);
   margin: 0;
 }
 
 /* Cabeçalho com logo e título */
 header {
-  background-color: #486465;
-  color: white;
+  background-color: var(--green-900);
+  color: var(--white);
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -43,11 +69,88 @@ nav ul {
 
 nav a {
   text-decoration: none; /* Remove o sublinhado dos links */
-  color: white;
+  color: var(--white);
   font-weight: 200;
 }
-
 nav a:hover {
-  color: #ff8c42;
+  color: var(--orange);
 }
 
+.login-btn {
+  border: none;
+  background-color: var(--green-900);
+  color: var(--white);
+}
+.login-btn:hover {
+  color: var(--orange);
+}
+
+/* ========================== Modal =============================================== */
+.modal-content {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: none;
+}
+
+.modal-header {
+  background-color: var(--green-900);
+  color: var(--white);
+  border-bottom: none;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  justify-content: space-between;
+}
+
+.modal-title {
+  font-weight: 400;
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+  color: var(--white);
+  font-size: 20px;
+}
+.closeButton:hover {
+  color: var(--orange);
+}
+
+.modal-body {
+  padding: 20px;
+}
+.forgot {
+  color: var(--orange);
+}
+
+.modal-footer {
+  border-top: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 15px 20px;
+}
+
+.btnSave {
+  background-color: var(--green-900);
+  color: var(--white);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.btnSave:hover {
+  background-color: var(--orange);
+}
+
+.btnCancel {
+  background-color: transparent;
+  border: 1px solid var(--green-900);
+  color: var(--green-900);
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.btnCancel:hover {
+  background-color: var(--green-900);
+  color: var(--white);
+}

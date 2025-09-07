@@ -7,6 +7,7 @@ import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.stream.Stream;
 
@@ -25,6 +26,7 @@ public class Application {
     }
 }
 
+@Repository
 interface TodoRepository extends CrudRepository<Todo, Long> {
 
 }

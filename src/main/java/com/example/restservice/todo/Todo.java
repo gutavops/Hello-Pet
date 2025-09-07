@@ -1,7 +1,7 @@
 package com.example.restservice.todo;
 
 import jakarta.persistence.Entity;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Id;
 
 @Entity
 public class Todo {

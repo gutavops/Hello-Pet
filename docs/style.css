@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+  --transparent: rgba(255, 255, 255, 0.2);
+  --gray-50: #D9D9D9;
+  --gray-100: #595959;
+  --gray-400: #717171;
+  --gray-800: #151515;
+  --gray-900: #121212;
+  --green-50: #f9f9f9;
+  --green-200: #eef5f5;
+  --green-900: #486465;
+  --orange-50: #ff9d63;
+  --orange-100: #ff8c42;
+}
+
+
+body {
+    min-height: 100vh;
+    display: block; 
+    background: var(--green-200);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.25em 6.25em;
+    background: var(--green-900);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.625em; 
+}
+
+header img {
+    width: 70px;
+    height: 70px;
+}
+
+.logo {
+  font-size: 2em;
+  color: white;
+  user-select: none;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5em;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.375em;
+    width: 100%;
+    height: 0.1875em;
+    background: var(--orange-100);
+    border-radius: 0.3125em;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation .btnHeader {
+    width: 8.125em;
+    height: 3.125em;
+    background: transparent;
+    border: 0.125em solid white;
+    outline: none;
+    border-radius: 0.375em;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 500;
+    margin-left: 2.5em;
+    transition: .5s;
+}
+
+.navigation .btnHeader:hover {
+    background: white;
+    color: var(--green-900);
+}
+
+.modal-header, .modal-footer {
+    background-color: var(--green-900);
+    color: white;
+    border: none;
+}
+
+.modal-header .btn-close {
+    filter: invert(1);
+}
+
+.modal-footer .btn-primary {
+    background: transparent;
+    border: 0.125em solid white;
+    border-radius: 0.375em;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.modal-footer .btn-primary:hover {
+    background: white;
+    color: var(--green-900);
+}
+
+.modal-body a {
+    color: var(--orange-100);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.modal-body a:hover {
+    color: var(--orange-50);
+    text-decoration: underline;
+}
+
+main {
+    width: 100%;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    padding: 2em 0;
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+.intro-section h2 {
+    font-size: 3em;
+    color: var(--green-900);
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+
+.intro-section p {
+    font-size: 1.2em;
+    color: var(--gray-400);
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+.btnSaibaMais {
+    display: inline-block;
+    background-color: var(--orange-100);
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.75em 2em;
+    border-radius: 0.5em;
+    margin-top: 1em;
+    transition: background-color 0.3s;
+}
+
+.btnSaibaMais:hover {
+    background-color: var(--orange-50);
+}
+
+.features-section {
+    margin-top: 5em;
+    max-width: 1000px;
+    margin: 5em auto 0;
+    padding: 0 2em;
+}
+
+.features-section h3 {
+    font-size: 2em;
+    color: var(--green-900);
+    margin-bottom: 2em;
+}
+
+.features-section ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    padding: 0;
+    flex-wrap: wrap; 
+}
+
+.features-section li {
+    font-size: 1.2em;
+    color: var(--gray-100);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    background-color: white;
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    flex-basis: 300px; 
+}
+
+.features-section li:hover {
+    transform: translateY(-10px);
+}
+
+.features-section li i {
+    color: var(--orange-100);
+    font-size: 3em; 
+    margin-bottom: 0.5em;
+}
+
+footer {
+    width: 100%;
+    background: var(--green-900);
+    padding: 1.25em 6.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    bottom: 0;
+    margin-top: auto;
+    text-align: center;
+}
+
+.footer-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    font-size: 0.95em;
+}
+
+.footer-navigation a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-navigation a:hover {
+    color: var(--orange-100);
+}
+
+.footer-navigation p {
+    margin: 0;
+    font-size: 0.9em;
+    color: var(--gray-50);
+}
+
+main.sobre {
+    width: 100%;
+    margin-top: 150px; 
+    margin-bottom: 150px; 
+    padding: 2em 3em; 
+    text-align: left; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sobre h2 {
+    font-size: 2.5em;
+    color: var(--green-900);
+    margin-bottom: 1.5em;
+    font-weight: 600;
+}
+
+.sobre p {
+    font-size: 1.2em;
+    color: var(--gray-400);
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+    max-width: 800px;
+    text-align: justify; 
+}
+
+.sobre strong {
+    font-weight: 600;
+    color: var(--green-900);
+}
+
+.sobre p i {
+    color: var(--orange-100); 
+    margin-right: 0.5em; 
+}
+
+/* Estilos para o Dashboard */
+
+.dashboard-content {
+    margin-top: 150px; 
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-section {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 3em; 
+}
+
+#searchInput {
+    width: 100%;
+    padding: 0.8em 1.5em;
+    font-size: 1.1em;
+    border: 2px solid var(--gray-50);
+    border-radius: 50px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+#searchInput:focus {
+    border-color: var(--orange-100);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5em;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.tutor-card {
+    background-color: white;
+    padding: 1.5em;
+    border-radius: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.tutor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.tutor-card h3 {
+    font-size: 1.4em;
+    color: var(--green-900);
+    margin-bottom: 0.5em;
+}
+
+.tutor-card p {
+    font-size: 1em;
+    color: var(--gray-400);
+}
+
+.tutor-card-link {
+    text-decoration: none;
+    color: inherit; 
+}
+
+/* Estilos para o formulário de cadastro */
+
+.form-container {
+    margin-top: 150px;
+    padding: 2em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container h2 {
+    color: var(--green-900);
+    margin-bottom: 1.5em;
+    font-size: 2em;
+}
+
+.form-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5em;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: var(--gray-400);
+    margin-bottom: 0.5em;
+}
+
+.form-group input,
+.form-group select {
+    padding: 0.8em;
+    border: 1px solid var(--gray-50);
+    border-radius: 0.5em;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--orange-100);
+    box-shadow: 0 0 5px rgba(255, 140, 66, 0.5);
+}
+
+.submit-btn {
+    grid-column: 1 / -1; /* O botão ocupa a largura total da grade */
+    padding: 1em;
+    background-color: var(--orange-100);
+    color: white;
+    font-weight: 500;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+    margin-top: 1em;
+}
+
+.submit-btn:hover {
+    background-color: var(--orange-50);
+}

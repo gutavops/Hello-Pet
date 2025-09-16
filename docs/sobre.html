@@ -1,66 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./static/styles.css" />
-  </head>
-  <body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
     <header>
-      <div class="logo">
-        <img src="./static/Logo.png" alt="Logo Hello Pet!" />
-        <h1>Hello Pet!</h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="./index.html">Home</a></li>
-        </ul>
-      </nav>
+        <div class="logo-container">
+            <img src="./assets/Logo.png" alt="Logo Hello Pet!">
+            <h2 class="logo">Hello Pet!</h2>
+        </div>
+        <nav class="navigation">
+            <a href="./index.html">Home</a>
+            <a href="./sobre.html">Sobre</a>
+            <button class="btnHeader" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+        </nav>
     </header>
-    <section class="sobre">
-        <h2>Quem somos</h2>
-        <p>
-          Somos o grupo <strong>Hello Pet</strong>, composto por Anna Lúcia de Sousa Dias, Gabriel Ceron de Melo, Gabriel Eduardo de Miranda Andrade, Gustavo Pereiro da Silva e Nicolas Silva Espinar — estudantes da <strong>FAM - Faculdade das Américas</strong>.
-        </p>
-      
-        <p>
-          Este projeto tem como objetivo o desenvolvimento de um <strong>sistema de prontuário veterinário eletrônico</strong>, no qual será possível cadastrar o pet e seu tutor, registrar informações de anamnese, vacinas, medicações, exames e consultas — criando assim um <strong>histórico clínico completo</strong> do animal.
-        </p>
-      
-        <h2>Missão</h2>
-        <p>
-          Desenvolver soluções digitais que facilitem a rotina de clínicas veterinárias e promovam um cuidado mais eficiente e organizado para os pets.
-        </p>
-      
-        <h2>Visão</h2>
-        <p>
-          Ser referência em inovação e praticidade na área de softwares e automações para a área veterinária, com sistemas acessíveis e funcionais.
-        </p>
-      
-        <h2>Valores</h2>
-        <ul>
-          <li>Responsabilidade e ética com os dados</li>
-          <li>Comprometimento com a saúde animal</li>
-          <li>Trabalho em equipe</li>
-          <li>Inovação e melhoria contínua</li>
-        </ul>
-    </section>      
+
+    <main>
+        <section class="sobre">
+            <h2>Quem somos</h2>
+            <p>
+                Somos o grupo <strong>Hello Pet</strong>, composto por Anna Lúcia de Sousa Dias, Gabriel Ceron de Melo,
+                Gabriel Eduardo de Miranda Andrade, Gustavo Pereiro da Silva e Nicolas Silva Espinar — estudantes da
+                <strong>FAM - Faculdade das Américas</strong>.
+            </p>
+
+            <p>
+                Este projeto tem como objetivo o desenvolvimento de um <strong>sistema de prontuário veterinário
+                    eletrônico</strong>, no qual será possível cadastrar o pet e seu tutor, registrar informações de
+                anamnese, vacinas, medicações, exames e consultas — criando assim um <strong>histórico clínico
+                    completo</strong> do animal.
+            </p>
+
+            <h2>Missão</h2>
+            <p>
+                Desenvolver soluções digitais que facilitem a rotina de clínicas veterinárias e promovam um cuidado mais
+                eficiente e organizado para os pets.
+            </p>
+
+            <h2>Visão</h2>
+            <p>
+                Ser referência em inovação e praticidade na área de softwares e automações para a área veterinária, com
+                sistemas acessíveis e funcionais.
+            </p>
+
+            <h2>Valores</h2>
+            <p>
+                <i class="bi bi-check-circle"></i>Responsabilidade e ética com os dados.</br>
+                <i class="bi bi-check-circle"></i>Comprometimento com a saúde animal.</br>
+                <i class="bi bi-check-circle"></i>Trabalho em equipe.</br>
+                <i class="bi bi-check-circle"></i>Inovação e melhoria contínua.
+            </p>
+        </section>
+    </main>
+
     <footer>
-        <div class="footerContainer">
-          <img src="./static/Logo.png" alt="Logo Hello Pet!" class="footer-logo" />
-          <p>&copy; 2025 Hello Pet! - Todos os direitos reservados.</p>
-          <p>Email: contato.hellopet@gmail.com</p>
-          <p><a href="https://www.instagram.com/hello_1_pet?igsh=MXQ0cnhyYnl2dWhmbw==" target="_blank">instagram</a></p>
-      </div>
+        <nav class="footer-navigation">
+            <a href="mailto:contato.hellopet@gmail.com">Email: contato.hellopet@gmail.com</a>
+            <a href="https://www.instagram.com/hello_1_pet?igsh=MXQ0cnhyYnl2dWhmbw==" target="_blank">Instagram</a>
+            <p>&copy; 2025 Hello Pet! - Todos os direitos reservados.</p>
+        </nav>
     </footer>
-    <script src="./static/script.js"></script>
-  </body>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="emailInput" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="passwordInput" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="passwordInput">
+                        </div>
+                    </form>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">Esqueci minha Senha</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="loginButton" onclick="login(event)">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="forgotPasswordModalLabel">Recuperar Senha</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="forgotEmailInput" class="form-label">Digite seu email</label>
+                            <input type="forgotEmail" class="form-control" id="forgotEmailInput" aria-describedby="emailHelp" placeholder="seuemail@exemplo.com">
+                        </div>
+                        <p>Você receberá um link para redefinir sua senha.</p>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+
 </html>
